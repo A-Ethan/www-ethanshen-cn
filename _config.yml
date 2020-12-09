@@ -15,8 +15,9 @@ future: true
 # SNS settings
 RSS: false
 # weibo_username:     huxpro
-zhihu_username:     ethanshen
+zhihu_username:     shen-85-50
 github_username:    a-ethan
+gitbook:        docs.ethanshen.cn
 # twitter_username:   huxpro
 #facebook_username:  huxpro
 #linkedin_username:  firstname-lastname-idxxxx
