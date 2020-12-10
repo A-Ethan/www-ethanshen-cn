@@ -98,7 +98,7 @@
         {% if include.short %}
         <div class="site-heading" id="tag-heading">
         {% else %}
-        <div class="site-heading">
+        <div class="site-heading" id="tag-heading">
         {% endif %}
           <h1>{% if page.bannertitle %}{{ page.bannertitle }}{% else %}{{ site.bannertitle }}{% endif %}</h1>
           <span class="subheading">{{ page.description }}</span>
