@@ -1,0 +1,33 @@
+name: publish_build_Jekyll_site
+on:
+  push:
+    branches: 
+    - main
+    paths:
+    - '_posts/'
+  pull_request:
+    branches: 
+    - main
+    paths:
+    - '_posts/'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: checkout action
+      uses: actions/checkout@v2
+    - name: Build the site in the jekyll/builder container
+      run: |
+        docker run \
+        -v ${{ github.workspace }}:/srv/jekyll -v ${{ github.workspace }}/_site:/srv/jekyll/_site \
+        jekyll/builder:latest /bin/bash -c "chmod 777 /srv/jekyll && jekyll build --future"
+    # 设置阿里云OSS的 id/secret，存储到 github 的 secrets 中
+    - name: setup aliyun oss
+      uses: A-Ethan/setup-ossutil@master
+      with:
+        endpoint: https://oss-cn-shanghai.aliyuncs.com
+        access-key-id: ${{ secrets.OSS_KEY_ID }}
+        access-key-secret: ${{ secrets.OSS_KEY_SECRET }}
+    - name: cp files to aliyun
+      run: ossutil cp -rf ${{ github.workspace }}/_site oss://www-ethanshen-cn/
