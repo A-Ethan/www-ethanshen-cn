@@ -8,6 +8,26 @@
 <ul class="list-inline">
 {% endif %}
 
+  {% if site.github_username %}
+  <li>
+    <a target="_blank" href="https://github.com/{{ site.github_username }}">
+      <span class="fa-stack fa-lg" title="Github">
+        <i class="fa fa-circle fa-stack-2x"></i>
+        <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+      </span>
+    </a>
+  </li>
+  {% endif %}
+  {% if site.gitbook %}
+  <li>
+    <a target="_blank" href="https://{{ site.gitbook }}">
+      <span class="fa-stack fa-lg" title="GitBook">
+        <i class="fa fa-circle fa-stack-2x"></i>
+        <i class="fa  fa-book fa-stack-1x fa-inverse"></i>
+      </span>
+    </a>
+  </li>
+  {% endif %}
   {% if site.RSS %}
   <li>
     <a href="{{ "/feed.xml" | prepend: site.baseurl }}">
@@ -31,7 +51,7 @@
   {% if site.zhihu_username %}
   <li>
     <a target="_blank" href="https://www.zhihu.com/people/{{ site.zhihu_username }}">
-      <span class="fa-stack fa-lg">
+      <span class="fa-stack fa-lg" title="知乎">
         <i class="fa fa-circle fa-stack-2x"></i>
         <i class="fa  fa-stack-1x fa-inverse">知</i>
       </span>
@@ -58,32 +78,12 @@
     </a>
   </li>
   {% endif %}
-  {% if site.github_username %}
-  <li>
-    <a target="_blank" href="https://github.com/{{ site.github_username }}">
-      <span class="fa-stack fa-lg">
-        <i class="fa fa-circle fa-stack-2x"></i>
-        <i class="fa fa-github fa-stack-1x fa-inverse"></i>
-      </span>
-    </a>
-  </li>
-  {% endif %}
   {% if site.linkedin_username %}
   <li>
     <a target="_blank" href="https://www.linkedin.com/in/{{ site.linkedin_username }}">
       <span class="fa-stack fa-lg">
         <i class="fa fa-circle fa-stack-2x"></i>
         <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
-      </span>
-    </a>
-  </li>
-  {% endif %}
-  {% if site.gitbook %}
-  <li>
-    <a target="_blank" href="https://{{ site.gitbook }}">
-      <span class="fa-stack fa-lg">
-        <i class="fa fa-circle fa-stack-2x"></i>
-        <i class="fa  fa-book fa-stack-1x fa-inverse"></i>
       </span>
     </a>
   </li>

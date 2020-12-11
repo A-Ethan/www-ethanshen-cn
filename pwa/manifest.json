@@ -1,7 +1,7 @@
 {
-  "name": "Hux Blog",
-  "short_name": "Hux Blog",
-  "description": "About an engineer & designer who loves web.",
+  "name": "伊桑老师的产品社",
+  "short_name": "Ethan",
+  "description": "找个地方，做知识沉淀",
   "icons": [{
     "src": "icons/128.png",
     "sizes": "128x128",
