@@ -21,63 +21,11 @@ jobs:
     steps:
     - name: checkout action
       uses: actions/checkout@v2
-<<<<<<< HEAD
-  # CI unitTest
-  unitTest:
-    needs:
-    - checkout
-    runs-on: ubuntu-latest
-    steps:
-    - name: run unitTest
-      run: echo "run unitTest"
-  # CI lintTest
-  lintTest:
-    needs:
-    - checkout
-    runs-on: ubuntu-latest
-    steps:
-    - name: run lintTest
-      run: echo "lintTest"
-  # CI build
-  build:
-    needs:
-    - lintTest
-    - unitTest
-    runs-on: ubuntu-latest
-    steps:
-=======
->>>>>>> parent of 06e06a1... Update publish_build_Jekyll_site.yaml
     - name: Build the site in the jekyll/builder container
       run: |
         docker run \
         -v ${{ github.workspace }}:/srv/jekyll -v ${{ github.workspace }}/_site:/srv/jekyll/_site \
         jekyll/builder:latest /bin/bash -c "chmod 777 /srv/jekyll && jekyll build --future"
-<<<<<<< HEAD
-  # CD Test
-  deployTest:
-    needs:
-    - build
-    runs-on: ubuntu-latest
-    steps:
-    - name: run deployTest
-      run: echo "deployTest"
-  # CD Pre
-  deployPre:
-    needs:
-    - build
-    runs-on: ubuntu-latest
-    steps:
-    - name: run deployPre
-      run: echo "deployPre"
-  # CD Pro #增加断点，可以手动触发
-  deployPro:
-    needs:
-    - deployTest
-    - deployPre
-    runs-on: ubuntu-latest
-    steps:
-=======
->>>>>>> parent of 06e06a1... Update publish_build_Jekyll_site.yaml
     # 设置阿里云OSS的 id/secret，存储到 github 的 secrets 中
     - name: setup aliyun oss
       uses: A-Ethan/setup-ossutil@master
