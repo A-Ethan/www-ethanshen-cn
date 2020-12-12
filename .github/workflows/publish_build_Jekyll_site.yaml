@@ -29,7 +29,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: run unitTest
-      uses: echo "run unitTest"
+      run: echo "run unitTest"
   # CI lintTest
   lintTest:
     needs:
@@ -37,7 +37,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: run lintTest
-      uses: echo "lintTest"
+      run: echo "lintTest"
   # CI build
   build:
     needs:
@@ -57,7 +57,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: run deployTest
-      uses: echo "deployTest"
+      run: echo "deployTest"
   # CD Pre
   deployPre:
     needs:
@@ -65,9 +65,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: run deployPre
-      uses: echo "deployPre"
+      run: echo "deployPre"
   # CD Pro #增加断点，可以手动触发
-  deploy:
+  deployPro:
     needs:
     - deployTest
     - deployPre
