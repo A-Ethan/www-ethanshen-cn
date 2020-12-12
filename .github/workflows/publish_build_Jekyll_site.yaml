@@ -16,16 +16,63 @@ on:
     - '.github/workflows/publish_build_Jekyll_site.yaml'
  
 jobs:
-  build:
+  # CI checkout
+  checkout:
     runs-on: ubuntu-latest
     steps:
     - name: checkout action
       uses: actions/checkout@v2
+  # CI unitTest
+  unitTest:
+    needs:
+    - checkout
+    runs-on: ubuntu-latest
+    steps:
+    - name: run unitTest
+      uses: echo "run unitTest"
+  # CI lintTest
+  lintTest:
+    needs:
+    - checkout
+    runs-on: ubuntu-latest
+    steps:
+    - name: run lintTest
+      uses: echo "lintTest"
+  # CI build
+  build:
+    needs:
+    - lintTest
+    - unitTest
+    runs-on: ubuntu-latest
+    steps:
     - name: Build the site in the jekyll/builder container
       run: |
         docker run \
         -v ${{ github.workspace }}:/srv/jekyll -v ${{ github.workspace }}/_site:/srv/jekyll/_site \
         jekyll/builder:latest /bin/bash -c "chmod 777 /srv/jekyll && jekyll build --future"
+  # CD Test
+  deployTest:
+    needs:
+    - build
+    runs-on: ubuntu-latest
+    steps:
+    - name: run deployTest
+      uses: echo "deployTest"
+  # CD Pre
+  deployPre:
+    needs:
+    - build
+    runs-on: ubuntu-latest
+    steps:
+    - name: run deployPre
+      uses: echo "deployPre"
+  # CD Pro #增加断点，可以手动触发
+  deploy:
+    needs:
+    - deployTest
+    - deployPre
+    runs-on: ubuntu-latest
+    steps:
     # 设置阿里云OSS的 id/secret，存储到 github 的 secrets 中
     - name: setup aliyun oss
       uses: A-Ethan/setup-ossutil@master
