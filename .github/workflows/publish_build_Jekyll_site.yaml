@@ -5,12 +5,14 @@ on:
     - main
     paths:
     - '_posts/'
+    - '_includes/'
     - '.github/workflows/publish_build_Jekyll_site.yaml'
   pull_request:
     branches: 
     - main
     paths:
     - '_posts/'
+    - '_includes/'
     - '.github/workflows/publish_build_Jekyll_site.yaml'
  
 jobs:
