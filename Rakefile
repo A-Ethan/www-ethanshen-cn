@@ -8,7 +8,7 @@
 
 
 # Add 2020-12-12 
-desc "Create a post in _posts"
+desc "Create a post in _drafts"
 task :new do
     puts "Input file(for Url)："
     @url = STDIN.gets.chomp
@@ -24,7 +24,7 @@ task :new do
     @slug = "#{@url}"
     @slug = @slug.downcase.strip.gsub(' ', '-')
     @date = Time.now.strftime("%F")
-    @post_name = "_posts/#{@date}-#{@slug}.md"
+    @post_name = "_drafts/#{@date}-#{@slug}.md"
 
 # if File.exist?(@post_name)
 #    abort("Failed to create the file name already exists !")
