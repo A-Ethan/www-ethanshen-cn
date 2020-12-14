@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      "Hello My Blog"
+title:      "[生活]Hello My Blog"
 subtitle:   " \"Hello World, Hello Blog\""
 date:       2020-12-11 12:00:00
 author:     "Ethan"
@@ -8,9 +8,6 @@ header-img: "images/about-bg.jpg"
 catalog: true
 tags:
     - 生活
-    - 产品
-    - devops
-    - kubernetes
 ---
 
 > “Yeah It's on. ”

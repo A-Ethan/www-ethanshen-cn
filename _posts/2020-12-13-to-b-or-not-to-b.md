@@ -1,7 +1,7 @@
 ---
 layout:     post
-title:      To B or Not to B
-subtitle:   B端产品经理的方法论
+title:      "[产品]ToB or Not toB"
+subtitle:   "B端产品经理的方法论"
 date:       2020-12-13 12:00:00
 author:     "Ethan"
 header-img: "images/default-bg2.jpg"
@@ -90,7 +90,7 @@ B端，由于每家业务都不相同，所以天然存在大量的个性化需�
 
 ##### 整体内容
 
-![](/images/20201213171834.png)
+![](/images/product/20201213171834.png)
 
 #### 行业发展
 
