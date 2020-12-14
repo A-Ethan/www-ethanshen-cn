@@ -50,7 +50,7 @@ Chocolatey是一款基于Windows的包管理器，安装后可以轻松的像lin
 
 2. 复制下面这条命令即可安装完成，这里没有太多坑。
 
-```
+```cmd
 Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
 ```
 
@@ -77,7 +77,7 @@ Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManage
 
 ## 编写main.tf
 
-```
+```tf
 terraform {
   required_providers {
     docker = {
