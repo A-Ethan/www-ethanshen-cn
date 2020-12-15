@@ -1,7 +1,7 @@
 ---
 layout:     post
-title:      "[kubernetes]利用 eBPF 支撑大规模 K8s Service"
-subtitle:   "转自公众号：云原生领域"
+title:      "[kubernetes]Cilium CNI通过eBPF实现替代kube-proxy"
+subtitle:   "未来可期的CNI插件"
 date:       2020-12-14 12:00:00
 author:     "Ethan"
 header-img: "images/default-bg2.jpg"
@@ -10,6 +10,17 @@ tags:
     - kubernetes
 ---
 
+Cilium通过内核的能力实现kube-proxy的功能，这点不同于iptables和netfilter体系结构。
+
+在 netfilter 框架中有5个钩子
+
+![](/images/kubernetes/2020-12-15-11-14-25.png)
+
+Cilium是未来可期的CNI插件，目前商用且掌握的并不多。短期看还是使用IPVS，调研Cilium。
+
+以下文章可以参考：
+
+[利用 eBPF 支撑大规模 K8s Service](https://mp.weixin.qq.com/s/TdSOHk5EnSBer8uG5vqNyg)
 
 [(译)深入理解 Kubernetes 网络模型 - 自己实现 kube-proxy 的功能](https://mp.weixin.qq.com/s/zWH5gAWpeAGie9hMrGscEg)
 
