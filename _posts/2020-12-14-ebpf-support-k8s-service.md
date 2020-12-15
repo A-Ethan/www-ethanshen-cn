@@ -10,6 +10,12 @@ tags:
     - kubernetes
 ---
 
+K8s当前重度依赖iptables来实现Service的抽象。对于每个Service及其backend pods，在K8s里会生成很多iptables规则。**例如5K个 Service时，iptables规则将达到25K条**，导致的后果：
+
+* **较高、并且不可预测的转发延迟（packet latency）**，因为每个包都要遍历这些规则 ，直到匹配到某条规则；
+* **更新规则的操作非常慢**：无法单独更新某条 iptables 规则，只能将全部规则读出来 ，更新整个集合，再将新的规则集合下发到宿主机。在动态环境中这一问题尤其明显，因为每 小时可能都有几千次的 backend pods 创建和销毁。
+* **可靠性问题**：iptables 依赖 Netfilter 和系统的连接跟踪模块（conntrack），在 大流量场景下会出现一些竞争问题（race conditions）；UDP 场景尤其明显，会导 致丢包、应用的负载升高等问题。
+
 Cilium通过内核的能力实现kube-proxy的功能，这点不同于iptables和netfilter体系结构。
 
 在 netfilter 框架中有5个钩子
