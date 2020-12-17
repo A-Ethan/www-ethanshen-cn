@@ -6,7 +6,7 @@ header-img: images/default-bg.jpg
 email: admin@ethanshen.cn
 description: "聊聊风花雪月 | Ethan.Shen 伊桑老师 云原生产品经理一枚 | 这里是伊桑老师的产品社，找个地方，做知识沉淀。"
 keyword: "沈旭, Ethan Shen, 伊桑老师, 伊桑老师的产品社, 产品社, 云原生, 容器, Docker, Kubernetes, container, 博客, Blog, 个人网站, 互联网, Web,"
-url: "https://ethanshen.cn"              # your host, for absolute URL
+url: "https://www.ethanshen.cn"              # your host, for absolute URL
 baseurl: ""                             # for example, '/blog' if your blog hosted on 'host/blog'
 
 # Publish posts or collection documents with a future date.
@@ -44,7 +44,9 @@ plugins:
   - jekyll-paginate
   - jekyll-mermaid
 
-
+# Meraid config
+mermaid:
+  src: 'path/to/mermaid.js'
 
 # Markdown settings
 # replace redcarpet to kramdown,
