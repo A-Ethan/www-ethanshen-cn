@@ -1,14 +1,14 @@
 {
-    "name": "hux-blog",
-    "title": "Hux Blog",
-    "author": "Hux <huxpro@gmail.com>",
+    "name": "Ethan Shen",
+    "title": "Ethan Shen",
+    "author": "Ethan <admin@ethanshen.cn>",
     "version": "1.7.0",
-    "homepage": "http://huxpro.github.io",
+    "homepage": "http://www.ethanshen.cn",
     "repository": {
         "type": "git",
-        "url": "https://github.com/Huxpro/huxpro.github.io"
+        "url": "https://github.com/A-Ethan/www-ethanshen-cn"
     },
-    "bugs": "https://github.com/Huxpro/huxpro.github.io/issues",
+    "bugs": "https://github.com/A-Ethan/www-ethanshen-cn/issues",
     "devDependencies": {
         "grunt": "~0.4.5",
         "grunt-contrib-less": "~0.11.4",

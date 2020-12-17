@@ -71,3 +71,10 @@ Rake可以帮助快速创建jekyll规范的md，Rakefile就是具体命令的执
 ## 感谢
 
 感谢hux的<a href="http://huangxuan.me/" target="_blank">theme</a>。
+
+## TODO
+1. featured tags fix
+2. content  内容
+3. RSS
+4. 转发
+5. 打赏:)
