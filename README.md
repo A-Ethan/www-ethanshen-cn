@@ -64,17 +64,30 @@ graph TD;
 
 ## 坑
 
-bundler的使用会将jekyll build时所需要的所有插件都进行安装，但windows上并不是所有插件都支持。
+* bundler的使用会将jekyll build时所需要的所有插件都进行安装，但windows上并不是所有插件都支持。
 
-Rake可以帮助快速创建jekyll规范的md，Rakefile就是具体命令的执行程序，windows支持的不好，[裂开]
+* Rake可以帮助快速创建jekyll规范的md，Rakefile就是具体命令的执行程序，windows支持的不好[裂开]。
+
+* mermaid复杂的图表画出来无法定位，只能确定关系正确，还是换个画图工具吧。
 
 ## 感谢
 
 感谢hux的<a href="http://huangxuan.me/" target="_blank">theme</a>。
 
+## DONE
+
+1. github action 自动化流水线--->阿里云OSS
+2. 站长统计
+3. https 支持
+4. CDN 支持
+5. tags fixed
+6. mermaid  流程图插件，流水线优化
+
+
 ## TODO
-1. featured tags fix
-2. content  内容
-3. RSS
-4. 转发
-5. 打赏:)
+
+1. RSS
+2. 浏览量
+3. 转发
+4. 打赏:)
+
