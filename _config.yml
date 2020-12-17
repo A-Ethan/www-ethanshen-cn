@@ -46,7 +46,7 @@ plugins:
 
 # Meraid config
 mermaid:
-  src: '/js/mermaid.min.js'
+  src: '/js/mermaid.js'
 
 # Markdown settings
 # replace redcarpet to kramdown,
