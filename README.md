@@ -48,7 +48,7 @@ mermaid:
   src: '/js/mermaid.js'
 ```
 
-1. 简单例子
+4. 简单例子
 
 ```
 {% mermaid %}
