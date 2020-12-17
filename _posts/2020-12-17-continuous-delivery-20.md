@@ -10,9 +10,10 @@ tags:
     - devops
 ---
 
+![](/images/devops/2020-12-17-16-29-06.png)
 
 > 持续交付中的“新常态”，VUCA特性
-> VUCA是volatility（易变性）、uncertainty（不确定性）、complexity（复杂性）、ambiguity（模糊性）
+> VUCA是Volatility（易变性）、Uncertainty（不确定性）、Complexity（复杂性）、Ambiguity（模糊性）
 
 ## 持续交付
 
@@ -167,7 +168,7 @@ mermaid 复杂的图还是支持的不好
 
 书中有价值的内容就这些，大部分都了解，也就不对书籍进行总结了，内容留着后期工作中review自己。
 
-![](/images/devops/2020-12-17-16-29-06.png)
+
 
 
 
