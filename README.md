@@ -38,12 +38,17 @@ gems: [jekyll-mermaid]
 
 3. 设置，js需要自己下载，试用版本，8.8.4
 
+https://unpkg.com/mermaid@8.8.4/dist/mermaid.js
+https://unpkg.com/mermaid@8.8.4/dist/mermaid.js.map
+https://unpkg.com/mermaid@8.8.4/dist/mermaid.min.js
+https://unpkg.com/mermaid@8.8.4/dist/mermaid.min.js.map
+
 ```yaml
 mermaid:
   src: '/js/mermaid.js'
 ```
 
-4. 简单例子
+1. 简单例子
 
 ```
 {% mermaid %}
