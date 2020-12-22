@@ -36,7 +36,7 @@ gem install jekyll-mermaid
 gems: [jekyll-mermaid]
 ```
 
-3. 设置，js需要自己下载，试用版本，8.8.4
+3. 设置，js需要自己下载，使用版本，8.8.4
 
 https://unpkg.com/mermaid@8.8.4/dist/mermaid.js
 https://unpkg.com/mermaid@8.8.4/dist/mermaid.js.map
